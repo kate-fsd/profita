@@ -57,11 +57,14 @@ $("document").ready(() => {
 
   $form.on("submit", (ev) => {
     ev.preventDefault();
+    const email = $('.form__input').val();
+
+    console.log({email})
 
     $.ajax({
       method: "POST",
       url: "api/send",
-      data: $form.serialize(),
+      data: { email },
     })
       .done(() => {
         $message.addClass("message_success");

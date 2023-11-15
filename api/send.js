@@ -3,6 +3,8 @@ const nodemailer = require("nodemailer");
 export default async function  (request, response) {
   if (!request.url) return response.status(400);
 
+  console.log('request.body', request.body)
+
   const { email } = request.body;
 
   if (!email) {
