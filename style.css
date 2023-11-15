@@ -265,7 +265,7 @@ footer .contact {
 .main__title:after {
   content: "";
   display: block;
-  height: 1px;
+  height: 2px;
   width: 100px;
   margin: 40px 0px 8px;
   background: #06b48a;
