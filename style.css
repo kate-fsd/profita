@@ -1,0 +1,641 @@
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("RedHatDisplay-Regular.eot");
+  src: local("Red Hat Display"), local("RedHatDisplay-Regular"),
+    url("fonts/RedHatDisplay/RedHatDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("RedHatDisplay-Bold.eot");
+  src: local("Red Hat Display Bold"), local("RedHatDisplay-Bold"),
+    url("fonts/RedHatDisplay/RedHatDisplay-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("RedHatDisplay-Medium.eot");
+  src: local("Red Hat Display Medium"), local("RedHatDisplay-Medium"),
+    url("fonts/RedHatDisplay/RedHatDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("RedHatDisplay-Black.eot");
+  src: local("Red Hat Display Black"), local("RedHatDisplay-Black"),
+    url("fonts/RedHatDisplay/RedHatDisplay-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* reset button */
+button {
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  cursor: pointer;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize line-height. Cannot be changed from normal in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable input types in iOS */
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+  height: 100vh;
+  min-height: 700px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  background: #eff9fd;
+  background-image: url("images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Red Hat Display", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #15263f;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  body {
+    height: auto;
+    min-height: 100svh;
+    overflow-y: auto;
+  }
+}
+
+header {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+footer {
+  display: none;
+  width: 100%;
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  footer {
+    display: block;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 110px;
+  padding: 20px 0px;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: auto;
+    justify-content: center;
+  }
+}
+
+.header__logo {
+}
+
+@media (max-width: 600px) {
+  .header__logo img {
+    width: 120px;
+  }
+}
+
+.contact {
+  margin-left: auto;
+}
+
+footer .contact {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  header .contact {
+    display: none;
+  }
+
+  footer .contact {
+    display: block;
+    text-align: center;
+  }
+}
+
+.contact {
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .contact {
+    font-size: 18px;
+  }
+}
+
+.contact-text {
+  margin-right: 6px;
+  font-weight: 700;
+}
+
+.contact-email {
+  text-decoration: none;
+  font-weight: 500;
+  color: #06b48a;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
+.main {
+  padding: 45px 0px 80px;
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 40px 0px;
+    height: 100%;
+  }
+}
+
+.main__texts {
+  width: 100%;
+  max-width: 621px;
+}
+
+@media (max-width: 800px) {
+  .main__texts {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main__texts {
+    max-width: 440px;
+    margin-bottom: 40px;
+  }
+}
+
+.main__title {
+  margin: 0;
+  font-size: 82px;
+  line-height: 1.05;
+  font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+  .main__title {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main__title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .main__title {
+    font-size: 40px;
+  }
+}
+
+.main__title span {
+  color: #06b48a;
+}
+
+.main__title:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100px;
+  margin: 40px 0px 8px;
+  background: #06b48a;
+}
+
+@media (max-width: 800px) {
+  .main__title:after {
+    margin: 40px auto 20px;
+  }
+}
+
+.main__subtitle {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.28;
+  font-weight: 400;
+  letter-spacing: 0.56px;
+}
+
+@media (max-width: 800px) {
+  .main__subtitle {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .main__subtitle {
+    font-size: 24px;
+  }
+}
+
+.main__button-block {
+  margin-left: 50px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .main__button-block {
+    margin-left: 0;
+  }
+}
+
+.main__button-wrapper {
+  width: 380px;
+  height: 380px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .main__button-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main__button-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.main__button-star-mask {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  -webkit-mask-image: url('images/star.svg');
+  mask-image: url('images/star.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  overflow: hidden;
+}
+
+.main__button-light-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  animation: lightWrapperMove 3s linear infinite, rotateLightWrapper 10s linear infinite;
+}
+
+@keyframes lightWrapperMove {
+  0% {
+    top: 50%;
+  }
+  25% {
+    top: 60%;
+  }
+  50% {
+    top: 50%;
+  }
+  75% {
+    top: 40%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes rotateLightWrapper {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main__button-light {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 525px;
+  height: 490px;
+  background-image: url("images/light.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: lightMove 2s linear infinite;
+}
+
+@keyframes lightMove {
+  0% {
+    left: 0%;
+    z-index: 1;
+  }
+  50% {
+    left: 100%;
+    z-index: 1;
+  }
+  51% {
+    z-index: -1;
+  }
+  100% {
+    left: 0%;
+    z-index: -1;
+  }
+}
+
+.main__button-star {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("images/star.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: rotateStar 20s linear infinite;
+}
+
+@keyframes rotateStar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main__button {
+  width: 100%;
+  height: 100%;
+  padding: 80px;
+  border-radius: 400px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .main__button {
+    padding: 60px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main__button {
+    font-size: 22px;
+  }
+}
+
+.carousel-wrapper {
+  height: 100%;
+  max-height: 400px;
+  align-self: flex-end;
+  margin-top: auto;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  .carousel-wrapper {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .carousel-wrapper,
+  .carousel-wrapper * {
+    display: none;
+  }
+}
+
+.splide {
+  position: absolute;
+}
+
+.carousel__image {
+  height: 400px;
+  margin: 0px 10px;
+}
+
+@media (max-width: 1000px) {
+  .carousel__image {
+    height: 200px;
+    margin: 0px 5px;
+  }
+}
+
+.modal {
+  width: 100vw;
+  height: 100svh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(21 38 63 / 0%);
+  transition: background 0s;
+}
+
+.modal_open {
+  z-index: 1000;
+  background: rgb(21 38 63 / 80%);
+  transition: background 0.5s;
+}
+
+.modal_open .modal__card {
+  display: block;
+}
+
+.modal__card {
+  display: none;
+  width: calc(100% - 40px);
+  max-width: 490px;
+  padding: 60px;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0px 12px 36px 0px rgba(38, 41, 46, 0.3);
+  position: relative;
+}
+
+.modal__close-button {
+  display: block;
+  padding: 16px;
+  font-size: 40px;
+  line-height: 0.575;
+  position: absolute;
+  top: -41px;
+  right: -36px;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .modal__close-button {
+    top: 4px;
+    right: 4px;
+    color: black;
+  }
+}
+
+.form_hidden {
+  display: none;
+}
+
+.form__title {
+  margin-bottom: 28px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+
+.form__input {
+  margin-bottom: 28px;
+  width: 100%;
+  padding: 12px 32px;
+  font-size: 16px;
+  line-height: 2.25;
+  font-weight: 400;
+}
+
+.form__input::placeholder {
+  color: #15263f;
+}
+
+.modal__button {
+  width: 100%;
+  padding: 20px 32px;
+  background: #06b48a;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.33;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .modal__button {
+    font-size: 22px;
+  }
+}
+
+.message {
+  display: none;
+}
+
+.message_success,
+.message_error {
+  display: block;
+}
+
+.message__text {
+  display: none;
+  /* margin-bottom: 28px; */
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
+
+.message_success .message__text_success {
+  display: block;
+}
+
+.message_error .message__text_error {
+  display: block;
+}
+
+.mobile-contact {
+  display: none;
+  padding: 20px 0px;
+}
+
+@media (max-width: 600px) {
+  .mobile-contact {
+    display: block;
+  }
+}
