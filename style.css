@@ -543,6 +543,13 @@ footer .contact {
   position: relative;
 }
 
+@media (max-width: 600px) {
+  .modal__card {
+    padding: 40px 20px;
+  }
+}
+
+
 .modal__close-button {
   display: block;
   padding: 16px;
@@ -556,8 +563,8 @@ footer .contact {
 
 @media (max-width: 600px) {
   .modal__close-button {
-    top: 4px;
-    right: 4px;
+    top: 0px;
+    right: 0px;
     color: black;
   }
 }
