@@ -17,8 +17,15 @@ $("document").ready(() => {
 
   splide.mount();
 
+  let isPause = false;
+
   document.addEventListener("wheel", (ev) => {
-    const slides = Math.floor(Math.abs(ev.deltaY) / 120) || 1;
+    if (isPause) return;
+    isPause = true;
+    setTimeout(() => (isPause = false), 100);
+
+    let slides = Math.floor(Math.abs(ev.deltaY) / 120) || 1;
+    slides = Math.min(slides, 3);
     const sign = ev.deltaY > 0 ? "+" : "+";
     splide.go(`${sign}${slides}`);
   });
@@ -57,7 +64,7 @@ $("document").ready(() => {
 
   $form.on("submit", (ev) => {
     ev.preventDefault();
-    const email = $('.form__input').val();
+    const email = $(".form__input").val();
 
     $.ajax({
       method: "POST",
