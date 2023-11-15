@@ -1,0 +1,22 @@
+{
+  "name": "profita",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kate-fsd/profita.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kate-fsd/profita/issues"
+  },
+  "homepage": "https://github.com/kate-fsd/profita#readme",
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  }
+}

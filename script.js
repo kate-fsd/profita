@@ -60,7 +60,7 @@ $("document").ready(() => {
 
     $.ajax({
       method: "POST",
-      url: "api/mail",
+      url: "api/send",
       data: $form.serialize(),
     })
       .done(() => {
