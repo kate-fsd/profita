@@ -25,7 +25,7 @@ export default async function (request, response) {
       text: "Email: " + email,
     });
 
-    return response.status(200).json(info);
+    return response.status(200).json({ id: info.messageId });
   } catch (e) {
     console.error(e);
     return response.status(500).statusText(e.message);
