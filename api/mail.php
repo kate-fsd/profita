@@ -3,7 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $admin_email = "profita@mail.io"; // Your email address
     $email = $_POST['email'];
     $message = "Email: " . $email;
-    $subject = "Pitch deck request";
+    $subject = "Pitch deck";
     $headers = array(
         'From' => $admin_email,
         'X-Mailer' => 'PHP/' . phpversion()

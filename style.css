@@ -338,8 +338,8 @@ footer .contact {
   left: -1px;
   width: calc(100% + 2px);
   height: calc(100% + 2px);
-  -webkit-mask-image: url('images/star.svg');
-  mask-image: url('images/star.svg');
+  -webkit-mask-image: url("images/star.svg");
+  mask-image: url("images/star.svg");
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-position: center;

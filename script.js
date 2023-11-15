@@ -61,19 +61,34 @@ $("document").ready(() => {
     $.ajax({
       method: "POST",
       url: "api/mail",
-      data: $(this).serialize(),
+      data: $form.serialize(),
     })
       .done(() => {
         $message.addClass("message_success");
+        downloadFile("/profita.pdf", "profita.pdf");
       })
       .fail(() => {
         $message.addClass("message_error");
       })
       .always(() => {
         $form.addClass("form_hidden");
-        $(this).trigger("reset");
+        $form.trigger("reset");
       });
 
     return false;
   });
 });
+
+function downloadFile(url, fileName) {
+  fetch(url, { method: "get", mode: "no-cors", referrerPolicy: "no-referrer" })
+    .then((res) => res.blob())
+    .then((res) => {
+      const aElement = document.createElement("a");
+      aElement.setAttribute("download", fileName);
+      const href = URL.createObjectURL(res);
+      aElement.href = href;
+      aElement.setAttribute("target", "_blank");
+      aElement.click();
+      URL.revokeObjectURL(href);
+    });
+}
