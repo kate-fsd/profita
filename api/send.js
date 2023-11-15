@@ -17,7 +17,7 @@ export default async function  (request, response) {
         secure: true,
         auth: {
           user: 'profita.mail@gmail.com',
-          pass: 'jB4ym89kPxv1',
+          pass: 'kkbp uwjz fhia zbze',
         },
       })
       .sendMail({
