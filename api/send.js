@@ -12,17 +12,17 @@ export default async function  (request, response) {
   try {	   
     await nodemailer
       .createTransport({
-        host: 'smtp.forwardemail.net',
+        host: 'smtp.gmail.com',
         port: 465,
         secure: true,
         auth: {
-          user: 'profita@mail.io',
+          user: 'profita.mail@gmail.com',
           pass: 'jB4ym89kPxv1',
         },
       })
       .sendMail({
-        from: '"Profita" <profita@mail.io>',
-        to: 'profita@mail.io',
+        from: '"Profita" <hello@profita.io>',
+        to: 'profita.mail@gmail.com',
         subject: "Pitch deck",
         text: "Email: " + email,
       })
